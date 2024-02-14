@@ -1,0 +1,14 @@
+{
+"triagem": [
+    {
+        "id" : 1,
+        "codigo": "A",
+        "numero": "999"
+    },
+    {
+        "id":2,
+        "codigo": "B",
+        "numero": "888"
+    }
+]
+}

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SpeechService } from './speech.service';
+import { catchError, pipe, tap, throwError } from 'rxjs';
+import { response } from 'express';
+import { subscribe } from 'node:diagnostics_channel';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,25 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'new';
+
+  newdata: any
+
+  constructor(private speech: SpeechService){
+
+  }
+
+
+  gerarSenha(){
+
+
+    
+
+    this.speech.vocaliza().subscribe(res=>{
+      this.newdata = res
+    })
+
+
+    }
+
 }
+ 
